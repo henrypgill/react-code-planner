@@ -69,7 +69,7 @@ module.exports = {
 
         //So that we can write html with certain characters - e.g. <p>Dragon's Lair</p>  - without getting grief
         "react/no-unescaped-entities": "off",
-
+        "jsx-a11y/no-autofocus": "off",
         //Disabling some of import/recommended to avoid writing import type {foo}
         "import/no-unresolved": "off",
         "import/named": "off",

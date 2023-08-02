@@ -1,3 +1,4 @@
+
 export function MyComponent(): JSX.Element {
-    return <div>My Component</div>;
+    return <div className="flow-container"></div>;
 }

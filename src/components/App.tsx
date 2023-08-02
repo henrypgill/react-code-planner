@@ -1,13 +1,23 @@
-import { MyComponent } from "./MyComponent";
-import "./App.css";
-import { greet } from "../greet";
+
+import { useState } from "react";
+import "../Styles/App.css";
+import "../Styles/ProcedureCard.css";
+import { EditableArea } from "./ProcedureComponents/EditableArea";
+import getAppDemoData from "./ProcedureComponents/Utils/getDemoData"
+import { Procedure } from "./ProcedureComponents/Utils/ProcedureInterfaces"
+
+
+
 
 function App() {
+
+    const [procedureList, setProcedureList] = useState<Procedure[]>(getAppDemoData())
+
     return (
         <div className="App">
-            <MyComponent />
-
-            {greet("World")}
+            <EditableArea 
+                procedureList={procedureList}
+                setProceduresList={(list: Procedure[]) => setProcedureList(list)} />
         </div>
     );
 }
